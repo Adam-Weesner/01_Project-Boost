@@ -8,4 +8,6 @@ public class KeyMapping : Singleton<KeyMapping>
     public KeyCode turnLeft = KeyCode.A;
     public KeyCode turnRight = KeyCode.D;
     public KeyCode boost = KeyCode.Space;
+    public KeyCode d_nextLevel = KeyCode.L;
+    public KeyCode d_toggleCollision = KeyCode.V;
 }
