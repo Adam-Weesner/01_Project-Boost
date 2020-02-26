@@ -89,7 +89,8 @@ public class Rocket : MonoBehaviour
 
     private void Rotate()
     {
-        rigidBody.freezeRotation = true;
+        // Remove rotation due to physics
+        rigidBody.angularVelocity = Vector3.zero;
 
         // Turning left/right
         if (Input.GetKey(KeyMapping.Instance.turnLeft))
@@ -100,8 +101,6 @@ public class Rocket : MonoBehaviour
         {
             transform.Rotate(-Vector3.forward * turnSpeed * Time.deltaTime);
         }
-
-        rigidBody.freezeRotation = false;
     }
 
     private void OnCollisionEnter(Collision collision)
